@@ -12,17 +12,11 @@
         .ng-hide { display: none!important; }
     </style>
 
-    <!-- build:css styles/lib.css -->
-    <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <!-- build:css styles/app.css-->
     <link rel="stylesheet" href=".tmp/styles.css"/>
-    <!-- endbuild -->
 </head>
 <body>
     <div>
@@ -30,7 +24,7 @@
         <div id="splash-page" ng-show="false">
             <div class="page-splash">
                 <div class="page-splash-message">
-                    Gulp Patterns Demo
+                    Gulp
                 </div>
                 <div class="progress progress-striped active page-progress-bar">
                     <div class="bar"></div>
@@ -39,8 +33,6 @@
         </div>
     </div>
 
-    <!-- build:js js/lib.js -->
-    <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -50,11 +42,7 @@
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/toastr/toastr.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <!-- build:js js/app.js-->
-    <!-- inject:js -->
     <script src="/src/client/app/app.module.js"></script>
     <script src="/src/client/app/core/core.module.js"></script>
     <script src="/src/client/app/customers/customers.module.js"></script>
@@ -82,11 +70,5 @@
     <script src="/src/client/app/blocks/exception/exception.js"></script>
     <script src="/src/client/app/blocks/logger/logger.js"></script>
     <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
-    <!-- endinject -->
-
-    <!-- inject:templates:js -->
-    <!-- endinject -->
-
-    <!-- endbuild -->
 </body>
 </html>
