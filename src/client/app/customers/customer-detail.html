@@ -1,0 +1,79 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div>
+                <button class="btn btn-info btn-form-md"
+                        ng-click="vm.goBack()">
+                    <i class="fa fa-hand-o-left"></i>Back
+                </button>
+                <button class="btn btn-info btn-form-md"
+                        ng-click="vm.cancel()"
+                        ng-disabled="vm.isUnchanged()">
+                    <i class="fa fa-undo"></i>Cancel
+                </button>
+                <button class="btn btn-info btn-form-md"
+                        ng-click="vm.save()"
+                        ng-disabled="form.$invalid || vm.isUnchanged()">
+                    <i class="fa fa-save"></i>Save
+                </button>
+
+                <!--Need ng-hide for show/hide animations-->
+                <span ng-hide="vm.isUnchanged()" class="dissolve-animation ng-hide flag-haschanges">
+                    <i class="fa fa-asterisk fa fa-asterisk-large" rel="tooltip" title="You have changes"></i>
+                </span>
+            </div>
+            <div class="widget wblue">
+                <div ht-widget-header title="Edit {{vm.getFullName() || 'New Customer'}}"></div>
+                <div class="widget-content user">
+                    <div class="form-group">
+                      <label class="control-label">ID: </label>
+                      <label class="control-label">{{vm.customer.id}}</label>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">First Name</label>
+                      <div>
+                          <input class="form-control"
+                                 ng-model="vm.customer.firstName"
+                                 placeholder="First Name"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label">Last Name</label>
+                      <div>
+                          <input class="form-control"
+                                 ng-model="vm.customer.lastName"
+                                 placeholder="Last Name"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">City</label>
+                        <div>
+                            <input class="form-control"
+                                   ng-model="vm.customer.city"
+                                   placeholder="City"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">State</label>
+                        <div>
+                            <input class="form-control"
+                                   ng-model="vm.customer.state"
+                                   placeholder="State"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Postal Code</label>
+                        <div>
+                            <input class="form-control"
+                                   ng-model="vm.customer.zip"
+                                   placeholder="Postal Code"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <img ht-img-person="{{vm.customer.thumbnail}}" class="img-thumbnail"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

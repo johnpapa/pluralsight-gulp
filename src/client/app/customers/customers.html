@@ -1,0 +1,34 @@
+<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wblue">
+                    <div ht-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <input ng-model="vm.filter" placeholder="Find customers" type="search"/>
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>City</th>
+                                <th>State</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="c in vm.customers | filter:vm.filter track by c.id"
+                                ng-click="vm.gotoCustomer(c)">
+                                <td>{{c.firstName + ' ' + c.lastName}}</td>
+                                <td>{{c.city}}</td>
+                                <td>{{c.state}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
