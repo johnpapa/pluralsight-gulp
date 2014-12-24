@@ -1,0 +1,29 @@
+{
+  "name": "Pluralsight-Gulp",
+  "version": "0.1.0",
+  "description": "Starter Code for Pluralsight Course JavaScript Build Automation with Gulp.js",
+  "authors": [
+    "John Papa"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/johnpapa/pluralsight-gulp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnpapa/pluralsight-gulp.git"
+  },
+  "scripts": {
+    "init": "npm install",
+    "install": "bower install",
+    "start": "node src/server/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.8.2",
+    "compression": "^1.1.0",
+    "cors": "^2.2.0",
+    "express": "^4.9.3",
+    "morgan": "^1.1.1",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+  }
+}
