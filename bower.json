@@ -1,18 +1,16 @@
 {
-  "name": "Gulp-Patterns-Demo",
+  "name": "Pluralsight-Gulp",
   "version": "0.1.0",
-  "description": "Gulp Patterns Demo",
+  "description": "Starter Code for Pluralsight Course JavaScript Build Automation with Gulp.js",
   "authors": [
     "John Papa"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/johnpapa/gulp-patterns",
+  "homepage": "https://github.com/johnpapa/pluralsight-gulp",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "devDependencies": {
     "angular-mocks": "~1.3.8",
