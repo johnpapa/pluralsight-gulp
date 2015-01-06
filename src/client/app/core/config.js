@@ -5,6 +5,7 @@
 
     core.config(toastrConfig);
 
+    toastrConfig.$inject = ['toastr'];
     /* @ngInject */
     function toastrConfig(toastr) {
         toastr.options.timeOut = 4000;
@@ -22,10 +23,11 @@
 
     core.config(configure);
 
+    configure.$inject = ['$compileProvider', '$logProvider',
+                         'routerHelperProvider', 'exceptionHandlerProvider'];
     /* @ngInject */
     function configure ($compileProvider, $logProvider,
                          routerHelperProvider, exceptionHandlerProvider) {
-
         $compileProvider.debugInfoEnabled(false);
 
         // turn debugging off/on (no info or warn)

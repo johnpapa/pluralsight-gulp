@@ -39,15 +39,15 @@
         $provide.decorator('$exceptionHandler', extendExceptionHandler);
     }
 
-    extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];
     /**
      * Extend the $exceptionHandler service to also display a toast.
      * @param  {Object} $delegate
      * @param  {Object} exceptionHandler
      * @param  {Object} logger
      * @return {Function} the decorated $exceptionHandler service
-     * @ngInject
      */
+    extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];
+    /* @ngInject */
     function extendExceptionHandler($delegate, exceptionHandler, logger) {
         return function(exception, cause) {
             var appErrorPrefix = exceptionHandler.config.appErrorPrefix || '';

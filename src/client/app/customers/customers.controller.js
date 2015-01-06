@@ -5,6 +5,7 @@
         .module('app.customers')
         .controller('Customers', Customers);
 
+    Customers.$inject = ['$state', 'dataservice', 'logger'];
     /* @ngInject */
     function Customers($state, dataservice, logger) {
         var vm = this;
