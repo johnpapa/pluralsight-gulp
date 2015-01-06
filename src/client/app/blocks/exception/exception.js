@@ -5,6 +5,7 @@
         .module('blocks.exception')
         .factory('exception', exception);
 
+    exception.$inject = ['logger'];
     /* @ngInject */
     function exception(logger) {
         var service = {
