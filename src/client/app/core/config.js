@@ -40,11 +40,15 @@
         ////////////////
 
         function configureStateHelper() {
-            var resolveAlways = { /* @ngInject */
-                ready: function(dataservice) {
-                    return dataservice.ready();
-                }
+            var resolveAlways = {
+                ready: ready
             };
+
+            ready.$inject = ['dataservice'];
+            /* @ngInject */
+            function ready(dataservice) {
+                return dataservice.ready();
+            }
 
             routerHelperProvider.configure({
                 docTitle: 'Gulp: ',
