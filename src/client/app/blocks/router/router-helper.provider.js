@@ -67,14 +67,18 @@
                         }
                         stateCounts.errors++;
                         handlingStateChangeError = true;
-                        var destination = (toState &&
-                            (toState.title || toState.name || toState.loadedTemplateUrl)) ||
-                            'unknown target';
-                        var msg = 'Error routing to ' + destination + '. ' +
-                            (error.data || '') + '. <br/>' + (error.statusText || '') +
-                            ': ' + (error.status || '');
+                        var msg = formatErrorMessage(error);
                         logger.warning(msg, [toState]);
                         $location.path('/');
+
+                        function formatErrorMessage(error) {
+                            var dest = (toState && (toState.title || toState.name ||
+                                                    toState.loadedTemplateUrl)) || 'unknown target';
+                            return 'Error routing to ' + dest + '. ' +
+                                error.message || error.data || '' +
+                                '. <br/>' + (error.statusText || '') +
+                                ': ' + (error.status || '');
+                        }
                     }
                 );
             }

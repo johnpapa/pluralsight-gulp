@@ -5,6 +5,7 @@
         .module('app.dashboard')
         .controller('Dashboard', Dashboard);
 
+    Dashboard.$inject = ['$state', 'dataservice', 'logger'];
     function Dashboard($state, dataservice, logger) {
         var vm = this;
         vm.customers = [];
@@ -15,7 +16,7 @@
 
         function activate() {
             return getCustomers().then(function() {
-                logger.info('Activated Dashboard View');
+                logger.info('Activated Dashboard');
             });
         }
 

@@ -5,9 +5,9 @@
         .module('app.core')
         .factory('dataservice', dataservice);
 
+    dataservice.$inject = ['$http', '$location', '$q', 'exception', 'logger'];
     /* @ngInject */
     function dataservice($http, $location, $q, exception, logger) {
-        /* jshint validthis:true */
         var readyPromise;
 
         var service = {
