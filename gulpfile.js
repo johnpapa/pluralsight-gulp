@@ -3,6 +3,8 @@ var gulp = require('gulp');
 var args = require('yargs').argv;
 var print = require('gulp-print').default;
 
+var config = require('./gulp.config')();
+
 var $ = require('gulp-load-plugins')({ lazy: true });
 // They're plugins.
 // var jshint = require('gulp-jshint');
@@ -14,10 +16,7 @@ gulp.task('vet', function() {
   log('Analyzing source with JSHint and JSCS');
 
   return gulp
-    .src([
-      './src/**/*.js',
-      './*.js'
-    ])
+    .src(config.alljs)
     .pipe($.if(args.verbose, print())) // NOTE: print when --verbose is passed
     .pipe($.jscs())
     .pipe($.jshint())
