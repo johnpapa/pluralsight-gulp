@@ -28,6 +28,7 @@
     "gulp": "^3.9.1",
     "gulp-jscs": "^4.1.0",
     "gulp-jshint": "^2.1.0",
+    "gulp-print": "^5.0.0",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1"
