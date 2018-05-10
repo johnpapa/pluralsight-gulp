@@ -33,5 +33,7 @@ function log(msg) {
         $.util.log($.util.colors.blue(msg));
       }
     }
+  } else {
+    $.util.log($.util.colors.blue(msg));
   }
 }
